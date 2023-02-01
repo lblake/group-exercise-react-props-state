@@ -1,9 +1,14 @@
 // An alternative way of declaring a component is to write it as a function which
 // returns a React.ReactNode. This is equivalent to the syntax in <ChuckCard/>
-function ChuckJoke(): React.ReactNode {
+
+interface ChuckJokeProps {
+	joke: string;
+}
+
+const ChuckJoke : React.FC<ChuckJokeProps> = ({joke}) => {
 
 	return (
-		<p></p>
+		<p>{joke}</p>
 	)
 }
 
