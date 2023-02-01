@@ -3,12 +3,13 @@
 
 interface ChuckJokeProps {
 	joke: string;
+	id: number;
 }
 
-const ChuckJoke : React.FC<ChuckJokeProps> = ({joke}) => {
+const ChuckJoke : React.FC<ChuckJokeProps> = ({joke, id}) => {
 
 	return (
-		<p>{joke}</p>
+		<p>{joke} {id}</p>
 	)
 }
 
