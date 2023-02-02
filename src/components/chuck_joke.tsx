@@ -3,7 +3,7 @@
 
 interface ChuckJokeProps {
 	joke: string;
-	id: number;
+	id?: number;
 }
 
 const ChuckJoke : React.FC<ChuckJokeProps> = ({joke, id}) => {

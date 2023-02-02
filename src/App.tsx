@@ -31,8 +31,8 @@ function App() {
       <ChuckInfo whalesSaved={whalesSaved} roundHouseKicks={roundHouseKicks} />
 
       <h2>Jokes:</h2>
-      {jokes.map((joke, id) => (
-        <ChuckJokes key={joke.id} joke={joke.joke} id={id} />
+      {jokes.map((joke, index) => (
+        <ChuckJokes key={joke.id} joke={joke.joke} id={index + 1} />
       ))}
 
       <h2>Remove Joke: </h2>
@@ -45,8 +45,8 @@ function App() {
       />
 
       <h2>Filtered Jokes:</h2>
-      {filteredJokes.map((joke, id) => (
-        <ChuckJokes key={joke.id} joke={joke.joke} id={id} />
+      {filteredJokes.map((joke) => (
+        <ChuckJokes key={joke.id} joke={joke.joke} />
       ))}
     </div>
   );
